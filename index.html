@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mio Yamamoto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <header>
+                <a href="#top">Mio Yamamoto</a>
+            <nav>    
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+            </nav>
+        </header>
+        <main>
+          <section id="top">
+            <p style="text-align:center"><img src="./media/スクリーンショット 2026-09-25 145823.png" width="100%">
+            <h1>
+                Mio Yamamoto<br>
+                Portfolio
+            </h1>
+            </p>
+          </section>
+
+          <section id="about">
+          <h3>About</h3>
+          <p>
+                山本 みお<br>
+                東京都市大学デザイン・データ科学部
+          </p>
+          <p>
+                専門:UX/UI、 インタラクションデザイン<br>
+                スキル:HTML/CSS/Processing/Arduino/Illust
+          </p>
+          </section>
+
+          <section id="works">
+          <h3>Works</h3>
+          <div class="works-controls">
+              <select id="category">
+                 <option value="all">すべてのカテゴリー</option>
+              </select>
+              <select id="sort">
+                  <option value="new">新しい順</option>
+                  <option value="old">古い順</option>
+                  <option value="title">タイトル順</option>
+              </select>
+            </div>
+          <div id="Works-grid"></div>
+          </section>
+
+        </main>
+        <footer>
+            <span>© 2026 Mio Yamamoto</span>
+
+       </footer>
+       <script src="works.js"></script>
+    </body>
+</html>

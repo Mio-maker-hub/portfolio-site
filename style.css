@@ -1,0 +1,105 @@
+* {box-sizing: border-box; }
+
+body{
+    background: #ffffff;
+    color: #221457;
+}
+
+a {
+    color:rgb(117, 102, 82);
+    text-decoration:rgb(255, 99, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 0px 30px;
+    background: #ffffff;
+    height: 75px;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+section {
+    padding: 10px 30px;
+}
+
+footer {
+    padding: 20px 30px;
+    font-size: 11px;
+}
+
+nav a:hover {
+    color:blue
+}
+
+#top{
+    padding-top: 75px;   
+}
+
+/* Works */
+#works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.work-card img{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.work-card{
+    border: 1px solid #221457;
+}
+
+.work-card h4 {
+    margin: 15px 1;
+}
+
+.work-card p {
+    margin: 0 15px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.work-card:hover {
+    opacity: 0.7;
+}
+
+.works-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.works-controls select{
+    padding: 10px;
+    font-size: 16;
+}
+
+.work-category {
+    font-size: 4px;
+    padding-top: 14px;
+    color:blue;
+}
+
+.work-year {
+    font-size: 10px;
+    margin-top: 10px;
+}
