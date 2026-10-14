@@ -132,7 +132,7 @@ nav a:hover {
 
 /*晴*/
 body.weather-sunny{
-    background-color:rgb(254, 218, 196);
+    background-color:rgb(251, 202, 172);
 }
 body.weather-sunny .site-header {
     background-color:#16b2dd;
