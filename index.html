@@ -1,62 +1,124 @@
+
 <!DOCTYPE html>
-<html lang ="ja">
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mio Yamamoto</title>
+        <meta name="description" content="山本みおのポートフォリオ。UI/UX、インタラクションデザイン、データ活用に関する制作物を紹介します。">
+        <title>Mio Yamamoto | Portfolio</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    
+
     <body>
         <header>
-                <a href="#top">Mio Yamamoto</a>
-            <nav>    
+            <a href="#top" class="site-logo">Mio Yamamoto</a>
+
+            <nav aria-label="メインナビゲーション">
                 <a href="#about">About</a>
                 <a href="#works">Works</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </header>
-        <main>
-          <section id="top">
-            <p style="text-align:center"><img src="./media/スクリーンショット 2026-09-25 145823.png" width="100%"></p>
-            <h1>
-                Mio Yamamoto<br>
-                Portfolio
-            </h1>
-            <p id="weather-icon"> </p>
-          </section>
-
-          <section id="about">
-          <h3>About</h3>
-          <p>
-                山本 みお<br>
-                東京都市大学デザイン・データ科学部
-          </p>
-          <p>
-                専門:UX/UI、 インタラクションデザイン<br>
-                スキル:HTML/CSS/Processing/Arduino/Illust
-          </p>
-          </section>
-
-          <section id="works">
-          <h3>Works</h3>
-          <div class="works-controls">
-              <select id="category">
-                 <option value="all">すべてのカテゴリー</option>
-              </select>
-              <select id="sort">
-                  <option value="new">新しい順</option>
-                  <option value="old">古い順</option>
-                  <option value="title">タイトル順</option>
-              </select>
+            <div class="weather-widget">
+                <span id="weather-icon" aria-label="現在の天気"></span>
+                <span id="weather-temperature"></span>
             </div>
-          <div id="works-grid"></div>
-          </section>
+        </header>
+
+        <main>
+            <section id="top" aria-labelledby="hero-title">
+                <img
+                    src="./media/スクリーンショット 2026-09-25 145823.png"
+                    alt="ポートフォリオのメインビジュアル"
+                    class="hero-image"
+                >
+
+                <p class="eyebrow">Analytical × Creativity × Innovation</p>
+
+                <h1 id="hero-title">
+                    Mio Yamamoto
+                    <span>Portfolio</span>
+                </h1>
+
+                <p class="hero-description">
+                    確かな分析力を基に「もの」と「こと」をデザイン･マネジメントできる。
+                    国際的イノベーション人材を目指す。
+                </p>
+
+            </section>
+
+            <section id="about" aria-labelledby="about-title">
+                <h2 id="about-title">About</h2>
+
+                <p>山本 みお</p>
+                <p>東京都市大学 デザイン・データ科学部</p>
+
+                <p>
+                    UX/UIデザインやインタラクションデザインを中心に、
+                    デザイン・データ・テクノロジーを組み合わせ問題発見から分析、
+                    課題解決まで取り組む。
+                </p>
+
+                <h3>Skills</h3>
+                <p>HTML / CSS / Processing / Arduino / Illustrator</p>
+            </section>
+
+
+            <section id="works" aria-labelledby="works-title">
+                <h2 id="works-title">Works</h2>
+
+                <div class="works-header">
+                    <p>これまでに取り組んだ制作物・プロジェクト</p>
+
+                    <div class="works-controls">
+                        <label for="category">カテゴリー</label>
+                        <select id="category">
+                            <option value="all">すべて</option>
+                        </select>
+
+                        <label for="sort">並び順</label>
+                        <select id="sort">
+                            <option value="new">新しい順</option>
+                            <option value="old">古い順</option>
+                            <option value="title">タイトル順</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="works-grid" aria-live="polite"></div>
+            </section>
+
+                    
+            <section id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title">Contact</h2>
+
+                <div class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span class="contact-colon">:</span>
+                    <a href="mailto:www12345@example.com.jp">
+                        www12345@example.com.jp
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <img src="github-mark.svg"
+                        alt=""
+                        class="github-icon">
+                    <span class="contact-colon">:</span>
+                    <a href="https://github.com/Mio-maker-hub"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        GitHub Profile
+                    </a>
+                </div>
+
+            </section>
 
         </main>
-        <footer>
-            <span>© 2026 Mio Yamamoto</span>
 
-       </footer>
-       <script src="works.js"></script>
+        <footer>
+            <a href="#top">Back to top ↑</a>
+            <small>© 2026 Mio Yamamoto</small>
+        </footer>
+
+        <script src="works.js"></script>
     </body>
 </html>

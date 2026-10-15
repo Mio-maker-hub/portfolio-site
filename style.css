@@ -1,13 +1,16 @@
+
 * {box-sizing: border-box; }
 
 body{
-    background: #ffffff;
-    color: #221457;
+    background: #F5F3EE;
+    color: #292F31;
+    margin: 0;
+    font-family: Arial, "Noto Sans JP", sans-serif;
 }
 
 a {
-    color:rgb(117, 102, 82);
-    text-decoration:rgb(255, 99, 1);
+    color: inherit;
+    text-decoration: none;
 }
 
 html {
@@ -22,11 +25,21 @@ header {
     width: 100%;
     position: fixed;
     padding: 0px 30px;
-    background: #ffffff;
-    height: 75px;
+    background: rgba(245, 243, 238, 0.94);
+    height: 80px;
     top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid #DCD8CE;
+    backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+.site-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
 nav {
     display: flex;
     gap: 28px;
@@ -39,21 +52,75 @@ section {
 footer {
     padding: 20px 30px;
     font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #DCD8CE;
+    color: #6F7775;
 }
 
 nav a:hover {
-    color:blue
+    color: #536F65;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 #top{
-    padding-top: 75px;   
+    padding-top: 100px;   
 }
 
-/* Works */
+.hero-image {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 360px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+#top h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+#top h1 span {
+    display: block;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/*Works*/
 #works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+.work-info {
+    padding: 15px;
+}
+
+.work-description {
+    line-height: 1.6;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    margin-top: 25px;
 }
 
 .work-card img{
@@ -63,93 +130,223 @@ nav a:hover {
     display: block;
 }
 
-.work-card{
-    border: 1px solid #221457;
+.work-card {
+    border: 1px solid #DCD8CE;
+    background: #FBFAF7;
 }
 
-.work-card h4 {
-    margin: 15px 1;
+.work-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
 }
 
 .work-card p {
-    margin: 0 15px;
+    margin: 8px 0;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.6;
 }
 
 .work-card:hover {
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .works-controls {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.works-controls select{
+.works-controls select {
     padding: 10px;
-    font-size: 16;
+    font-size: 12px;
+    border: 1px solid #DCD8CE;
+    border-radius: 2px;
+    background: #FBFAF7;
+    color: #292F31;
 }
 
 .work-category {
-    font-size: 4px;
-    padding-top: 14px;
-    color:blue;
+    font-size: 12px;
+    padding-top: 0;
+    color: #536F65;
+}
+
+.work-description {
+    line-height: 1.8;
+    color: #6F7775;
 }
 
 .work-year {
     font-size: 10px;
     margin-top: 10px;
+    color: #6F7775;
+}
+
+.works-header p {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Contact*/
+.contact-item {
+    display: grid;
+    grid-template-columns: 24px 12px auto;
+    align-items: center;
+    column-gap: 6px;
+    margin-bottom: 12px;
+}
+
+.contact-icon,
+.github-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    object-fit: contain;
+    justify-self: center;
+    margin: 0;
+}
+
+
+.contact-colon {
+    text-align: center;
+    margin: 0;
+}
+
+#contact .contact-item a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+#contact .contact-item a:hover {
+    opacity: 0.6;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 /*スマートフォン*/
 @media screen and (max-width: 600px) {
-    stop {
-        padding-top: 80px;
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    header {
+        padding: 0 15px;
+        height: 65px;
+    }
+
+    .site-logo {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    #top {
+        padding-top: 85px;
     }
 
     #top img {
-        width:100%
+        width: 100%;
     }
 
-    #works-grid{
-        grid-template-columns: lfr;
+    #works-grid {
+        grid-template-columns: 1fr;
     }
-    
-    .work-controls {
+
+    .works-controls {
         flex-direction: column;
+        align-items: stretch;
     }
+
+    .works-controls select {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 15px;
+        gap: 10px;
+    }
+    .weather-widget {
+    gap: 4px;
+    }
+
+    #weather-icon {
+        font-size: 18px;
+    }
+
+    #weather-temperature {
+        font-size: 11px;
+    }
+    footer > a:hover {
+        opacity: 0.6;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+
 
 }
 
 /*天気*/
 #weather-icon {
-    font-size: 60px;
+    font-size: 22px;
     margin: 0;
+    color: #536F65;
+}
+
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+#weather-temperature {
+    font-size: 12px;
+    color: #292F31;
 }
 
 /*晴*/
-body.weather-sunny{
-    background-color:rgb(251, 202, 172);
+body.weather-sunny {
+    background-color: #E8D4B8;
 }
-body.weather-sunny .site-header {
-    background-color:#16b2dd;
+
+body.weather-sunny header {
+    background-color: rgba(220, 177, 126, 0.97);
 }
 
 /*曇り*/
-body.weather-cloudy{
-    background-color:rgb(255, 252, 98);
+body.weather-cloudy {
+    background-color: #D5DDD3;
 }
-body.weather-cloudy .site-header {
-    background-color:#b496ff;
+
+body.weather-cloudy header {
+    background-color: rgba(160, 179, 157, 0.97);
 }
 
 /*雨*/
-body.weather-rainy{
-    background-color:rgb(237, 157, 206);
+body.weather-rainy {
+    background-color: #CEDCE5;
 }
-body.weather-rainy .site-header {
-    background-color:#b7ffb7;
+
+body.weather-rainy header {
+    background-color: rgba(143, 170, 190, 0.97);
 }
+
